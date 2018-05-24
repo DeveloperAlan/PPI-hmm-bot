@@ -49,12 +49,12 @@ while True:
     # Read the Euler angles for heading, roll, pitch (all in degrees).
     heading, roll, pitch = bno.read_euler()
 
-    if og_heading == 0 && og_roll == 0 && og_pitch == 0:
+    if og_heading == 0 and og_roll == 0 and og_pitch == 0:
         og_heading = heading
         og_roll = roll
         og_pitch = pitch
-    else
-        if og_heading != heading || og_roll != roll || og_pitch != pitch
+    else:
+        if og_heading != heading or og_roll != roll or og_pitch != pitch:
             print("It's different")
             og_heading = heading
             og_roll = roll
