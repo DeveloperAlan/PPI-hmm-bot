@@ -69,5 +69,5 @@ def keep_trying_bno():
     try:
         bno.begin()
         return
-    except RuntimeError e:
+    except RuntimeError:
         keep_trying_bno()
