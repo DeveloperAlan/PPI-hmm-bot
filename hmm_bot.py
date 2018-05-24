@@ -45,7 +45,9 @@ print('Gyroscope ID:       0x{0:02X}\n'.format(gyro))
 
 print('Reading BNO055 data, press Ctrl-C to quit...')
 while True:
-    og_heading, og_roll, og_pitch = 0
+    og_heading = 0
+    og_roll = 0
+    og_pitch = 0
     # Read the Euler angles for heading, roll, pitch (all in degrees).
     heading, roll, pitch = bno.read_euler()
 
