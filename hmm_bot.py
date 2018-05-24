@@ -5,6 +5,7 @@
 import logging
 import sys
 import time
+import pygame
 
 from Adafruit_BNO055 import BNO055
 
@@ -14,6 +15,9 @@ def keep_trying_bno():
         return
     except RuntimeError:
         keep_trying_bno()
+
+pygame.mixer.init()
+pygame.mixer.music.load("./hmm.wav")
 
 # Raspberry Pi configuration with serial UART and RST connected to GPIO 23:
 bno = BNO055.BNO055(serial_port='/dev/serial0', rst=23)
@@ -58,6 +62,7 @@ while True:
     else:
         if og_heading != heading or og_roll != roll or og_pitch != pitch:
             print("It's different")
+            pygame.mixer.music.load("./hmm.wav")
             og_heading = heading
             og_roll = roll
             og_pitch = pitch
