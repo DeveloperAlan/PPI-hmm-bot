@@ -44,10 +44,10 @@ print('Magnetometer ID:    0x{0:02X}'.format(mag))
 print('Gyroscope ID:       0x{0:02X}\n'.format(gyro))
 
 print('Reading BNO055 data, press Ctrl-C to quit...')
+og_heading = 0
+og_roll = 0
+og_pitch = 0
 while True:
-    og_heading = 0
-    og_roll = 0
-    og_pitch = 0
     # Read the Euler angles for heading, roll, pitch (all in degrees).
     heading, roll, pitch = bno.read_euler()
 
@@ -65,7 +65,6 @@ while True:
     # Read the calibration status, 0=uncalibrated and 3=fully calibrated.
     sys, gyro, accel, mag = bno.get_calibration_status()
     # Print everything out.
-    print("It might be different")
     print('Heading={0:0.2F} Roll={1:0.2F} Pitch={2:0.2F}\tSys_cal={3} Gyro_cal={4} Accel_cal={5} Mag_cal={6}'.format(
           heading, roll, pitch, sys, gyro, accel, mag))
     # Other values you can optionally read:
