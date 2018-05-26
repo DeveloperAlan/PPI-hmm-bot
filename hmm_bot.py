@@ -63,6 +63,7 @@ while True:
         if og_heading != heading or og_roll != roll or og_pitch != pitch:
             print("It's different")
             pygame.mixer.music.load("./hmm.wav")
+            pygame.mixer.music.play()
             og_heading = heading
             og_roll = roll
             og_pitch = pitch
