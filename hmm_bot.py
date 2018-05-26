@@ -6,6 +6,7 @@ import logging
 import sys
 import time
 import pygame
+import random
 
 from Adafruit_BNO055 import BNO055
 
@@ -17,7 +18,9 @@ def keep_trying_bno():
         keep_trying_bno()
 
 pygame.mixer.init()
-pygame.mixer.music.load("./hmm.wav")
+hmm = ["./sounds/dunky_hmm.wav","./sounds/hmm.wav","./sounds/nootnoot.wav","./sounds/pewdipiehmmlaugh.wav","./sounds/siegmeyermmm.wav","./sounds/spongebobhmm.wav","./sounds/Yodahmm.wav"]
+pygame.mixer.music.load(random.choice(hmm))
+
 
 # Raspberry Pi configuration with serial UART and RST connected to GPIO 23:
 bno = BNO055.BNO055(serial_port='/dev/serial0', rst=23)
