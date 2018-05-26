@@ -19,6 +19,7 @@ def keep_trying_bno():
 
 pygame.mixer.init()
 hmm = ["./sounds/dunky_hmm.wav","./sounds/hmm.wav","./sounds/nootnoot.wav","./sounds/pewdipiehmmlaugh.wav","./sounds/siegmeyermmm.wav","./sounds/spongebobhmm.wav","./sounds/Yodahmm.wav"]
+
 pygame.mixer.music.load(random.choice(hmm))
 
 
@@ -65,7 +66,7 @@ while True:
     else:
         if og_heading != heading or og_roll != roll or og_pitch != pitch:
             print("It's different")
-            pygame.mixer.music.load("./hmm.wav")
+            pygame.mixer.music.load(random.choice(hmm))
             pygame.mixer.music.play()
             og_heading = heading
             og_roll = roll
