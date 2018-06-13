@@ -17,11 +17,14 @@ def keep_trying_bno():
     except RuntimeError:
         keep_trying_bno()
 
+print('program currently running')
 pygame.mixer.init()
+print("pygame has finished initializing")
+#Array that  references sounds
 hmm = ["./sounds/dunky_hmm.wav","./sounds/hmm.wav","./sounds/nootnoot.wav","./sounds/pewdipiehmmlaugh.wav","./sounds/siegmeyermmm.wav","./sounds/spongebobhmm.wav","./sounds/Yodahmm.wav"]
 
 pygame.mixer.music.load(random.choice(hmm))
-
+print("pygame has loaded all the hmm")
 
 # Raspberry Pi configuration with serial UART and RST connected to GPIO 23:
 bno = BNO055.BNO055(serial_port='/dev/serial0', rst=23)
@@ -31,7 +34,9 @@ if len(sys.argv) == 2 and sys.argv[1].lower() == '-v':
     logging.basicConfig(level=logging.DEBUG)
 
 # Try before you die
+print("currently trying to establish bno connection")
 keep_trying_bno()
+print("finished establishing bno")
 
 
 # Print system status and self test result.
@@ -95,4 +100,4 @@ while True:
     # in meters per second squared):
     #x,y,z = bno.read_gravity()
     # Sleep for a second until the next reading.
-    time.sleep(1)
+    time.sleep(3)
