@@ -14,10 +14,10 @@ hmm = ["./sounds/dunky_hmm.wav","./sounds/hmm.wav","./sounds/nootnoot.wav","./so
 
 
 def choose_action(x):
-    if x == 1:
+    if x == "1":
         print("Okay 1")
         pygame.mixer.music.load(hmm[0])
-    elif x == 2:
+    elif x == "2":
         print("Okay 2")
         pygame.mixer.music.load(hmm[1])
     else:
