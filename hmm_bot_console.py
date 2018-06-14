@@ -80,6 +80,7 @@ def whiteOff():
 	turnOff(bluePin)
 
 def choose_action(x):
+    whiteOff()
     if x == "1":
         print("Okay 1")
         pygame.mixer.music.load(hmm[0])
