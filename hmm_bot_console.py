@@ -13,9 +13,9 @@ import RPi.GPIO as GPIO
 #Array that  references sounds
 hmm = ["./sounds/dunky_hmm.wav","./sounds/hmm.wav","./sounds/nootnoot.wav","./sounds/pewdipiehmmlaugh.wav","./sounds/siegmeyermmm.wav","./sounds/spongebobhmm.wav","./sounds/Yodahmm.wav"]
 
-redPin = 11
+redPin = 15
 greenPin = 13
-bluePin = 15
+bluePin = 11
 
 def turnOn(pin):
 	GPIO.setmode(GPIO.BOARD)
