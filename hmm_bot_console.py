@@ -17,9 +17,11 @@ def choose_action(x):
     if x == "1":
         print("Okay 1")
         pygame.mixer.music.load(hmm[0])
+        pygame.mixer.music.play()
     elif x == "2":
         print("Okay 2")
         pygame.mixer.music.load(hmm[1])
+        pygame.mixer.music.play()
     else:
         print("Not Okay")
 
