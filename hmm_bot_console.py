@@ -135,9 +135,9 @@ def choose_action(x):
         number = 0
         while number < 4:
             greenOn()
-            sleep(1)
+            time.sleep(1)
             redOn()
-            sleep(1)
+            time.sleep(1)
             number += 1
     elif x == "14":
         pygame.mixer.music.load(hmm[1])
@@ -145,9 +145,9 @@ def choose_action(x):
         number = 0
         while number < 4:
             redOn()
-            sleep(1)
+            time.sleep(1)
             redOff()
-            sleep(1)
+            time.sleep(1)
             number += 1
     elif x == "15":
         pygame.mixer.music.load(hmm[4])
@@ -163,9 +163,9 @@ def choose_action(x):
         number = 0
         while number < 4:
             redOn()
-            sleep(1)
+            time.sleep(1)
             greenOn()
-            sleep(1)
+            time.sleep(1)
             number += 1
     elif x == "18":
         pygame.mixer.music.load(hmm[4])
@@ -173,9 +173,9 @@ def choose_action(x):
         number = 0
         while number < 4:
             redOn()
-            sleep(1)
+            time.sleep(1)
             magentaOn()
-            sleep(1)
+            time.sleep(1)
             number += 1
     else:
         blueOn()
