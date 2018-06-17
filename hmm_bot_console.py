@@ -121,15 +121,15 @@ def choose_action(x):
         pygame.mixer.music.load(hmm[6])
         pygame.mixer.music.play()
         blueOn()
-    elif x == "11"
+    elif x == "11":
         pygame.mixer.music.load(hmm[2])
         pygame.mixer.music.play()
         yellowOn()
-    elif x == "12"
+    elif x == "12":
         pygame.mixer.music.load(hmm[5])
         pygame.mixer.music.play()
         blueOn()
-    elif x == "13"
+    elif x == "13":
         pygame.mixer.music.load(hmm[1])
         pygame.mixer.music.ploy()
         number = 0
@@ -139,7 +139,7 @@ def choose_action(x):
             redOn()
             sleep(1)
             number++
-    elif x == "14"
+    elif x == "14":
         pygame.mixer.music.load(hmm[1])
         pygame.mixer.music.play()
         number = 0
@@ -149,15 +149,15 @@ def choose_action(x):
             redOff()
             sleep(1)
             number++
-    elif x == "15"
+    elif x == "15":
         pygame.mixer.music.load(hmm[4])
         pygame.mixer.music.play()
         redOn()
-    elif x == "16"
+    elif x == "16":
         pygame.mixer.music.load(hmm[1])
         pygame.mixer.music.play()
         greenOn()
-    elif x == "17"
+    elif x == "17":
         pygame.mixer.music.load(hmm[6])
         pygame.mixer.music.play()
         number = 0
@@ -167,7 +167,7 @@ def choose_action(x):
             greenOn()
             sleep(1)
             number++
-    elif x == "18"
+    elif x == "18":
         pygame.mixer.music.load(hmm[4])
         pygame.mixer.music.play()
         number = 0
