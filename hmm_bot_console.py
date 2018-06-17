@@ -184,8 +184,6 @@ def choose_action(x):
 print('program currently yrunning')
 pygame.mixer.init()
 print("pygame has finished initializing")
-pygame.mixer.music.load(random.choice(hmm))
-print("pygame has loaded all the hmm")
 
 whiteOn()
 
