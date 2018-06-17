@@ -138,7 +138,7 @@ def choose_action(x):
             sleep(1)
             redOn()
             sleep(1)
-            number++
+            number += 1
     elif x == "14":
         pygame.mixer.music.load(hmm[1])
         pygame.mixer.music.play()
@@ -148,7 +148,7 @@ def choose_action(x):
             sleep(1)
             redOff()
             sleep(1)
-            number++
+            number += 1
     elif x == "15":
         pygame.mixer.music.load(hmm[4])
         pygame.mixer.music.play()
@@ -166,7 +166,7 @@ def choose_action(x):
             sleep(1)
             greenOn()
             sleep(1)
-            number++
+            number += 1
     elif x == "18":
         pygame.mixer.music.load(hmm[4])
         pygame.mixer.music.play()
@@ -176,7 +176,7 @@ def choose_action(x):
             sleep(1)
             magentaOn()
             sleep(1)
-            number++
+            number += 1
     else:
         blueOn()
         print("Not Okay")
