@@ -11,7 +11,7 @@ import os
 import RPi.GPIO as GPIO
 
 #Array that  references sounds
-hmm = ["./sounds/dunky_hmm.wav","./sounds/hmm.wav","./sounds/nootnoot.wav","./sounds/pewdipiehmmlaugh.wav","./sounds/siegmeyermmm.wav","./sounds/spongebobhmm.wav","./sounds/Yodahmm.wav"]
+hmm = ["./sounds/frustration_hmm_purple.wav","./sounds/good_idea_green.wav","./sounds/good_idea_yellow.wav","./sounds/holding_bot_blue.wav","./sounds/negative_hmm_red.wav","./sounds/thinking_hmm_green.wav","./sounds/try_again_hmm_orange.wav"]
 
 redPin = 15
 greenPin = 13
@@ -82,15 +82,101 @@ def whiteOff():
 def choose_action(x):
     whiteOff()
     if x == "1":
-        print("Okay 1")
-        pygame.mixer.music.load(hmm[0])
+        pygame.mixer.music.load(hmm[2])
+        pygame.mixer.music.play()
+        yellowOn()
+    elif x == "2":
+        pygame.mixer.music.load(hmm[1])
+        pygame.mixer.music.play()
+        cyanOn()
+    elif x == "3":
+        pygame.mixer.music.load(hmm[4])
         pygame.mixer.music.play()
         redOn()
-    elif x == "2":
-        print("Okay 2")
+    elif x == "4":
+        pygame.mixer.music.load(hmm[5])
+        pygame.mixer.music.play()
+        cyanOn()
+    elif x == "5":
+        pygame.mixer.music.load(hmm[6])
+        pygame.mixer.music.play()
+        blueOn()
+    elif x == "6":
+        pygame.mixer.music.load(hmm[6])
+        pygame.mixer.music.play()
+        blueOn()
+    elif x == "7":
+        pygame.mixer.music.load(hmm[6])
+        pygame.mixer.music.play()
+        blueOn()
+    elif x == "8":
+        pygame.mixer.music.load(hmm[6])
+        pygame.mixer.music.play()
+        blueOn()
+    elif x == "9":
+        pygame.mixer.music.load(hmm[6])
+        pygame.mixer.music.play()
+        blueOn()
+    elif x == "10":
+        pygame.mixer.music.load(hmm[6])
+        pygame.mixer.music.play()
+        blueOn()
+    elif x == "11"
+        pygame.mixer.music.load(hmm[2])
+        pygame.mixer.music.play()
+        yellowOn()
+    elif x == "12"
+        pygame.mixer.music.load(hmm[5])
+        pygame.mixer.music.play()
+        blueOn()
+    elif x == "13"
+        pygame.mixer.music.load(hmm[1])
+        pygame.mixer.music.ploy()
+        number = 0
+        while number < 4:
+            greenOn()
+            sleep(1)
+            redOn()
+            sleep(1)
+            number++
+    elif x == "14"
+        pygame.mixer.music.load(hmm[1])
+        pygame.mixer.music.play()
+        number = 0
+        while number < 4:
+            redOn()
+            sleep(1)
+            redOff()
+            sleep(1)
+            number++
+    elif x == "15"
+        pygame.mixer.music.load(hmm[4])
+        pygame.mixer.music.play()
+        redOn()
+    elif x == "16"
         pygame.mixer.music.load(hmm[1])
         pygame.mixer.music.play()
         greenOn()
+    elif x == "17"
+        pygame.mixer.music.load(hmm[6])
+        pygame.mixer.music.play()
+        number = 0
+        while number < 4:
+            redOn()
+            sleep(1)
+            greenOn()
+            sleep(1)
+            number++
+    elif x == "18"
+        pygame.mixer.music.load(hmm[4])
+        pygame.mixer.music.play()
+        number = 0
+        while number < 4:
+            redOn()
+            sleep(1)
+            magentaOn()
+            sleep(1)
+            number++
     else:
         blueOn()
         print("Not Okay")
@@ -100,6 +186,8 @@ pygame.mixer.init()
 print("pygame has finished initializing")
 pygame.mixer.music.load(random.choice(hmm))
 print("pygame has loaded all the hmm")
+
+whiteOn()
 
 while True:
     print("Choose which input for the example")
@@ -119,6 +207,8 @@ while True:
     print("14. Asking the bot: Set an alarm for 7:30 am")
     print("15. Overwhelming negative response")
     print("16. Overwhelming positive response")
+    print("17. Merry Christmas")
+    print("18. Happy Halloween")
 
     READ=raw_input("which input")
     print(READ)
